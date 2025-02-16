@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+        <link rel="stylesheet" href="style.css">
+        <body class="site-background">
+            <ul>
+                <li><a href="AnaSayfa.html">Ana Sayfa</a></li>
+                <li><a href="Kurallar.html">Kurallar</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="giris.html" class="active">Giriş</a></li>
+            </ul>
+            <div class="profil">
+            <div class="profilresim">
+                <img src="pfpfoto.jpg" alt="tgssp">
+            </div>
+            <div class="profilisim">
+                <h1>Merhaba, <span id="displayName"></span></h1>
+            </div>
+            <div class="profilhakkında">
+                <h3>kullanıcıisim hakkında</h3>
+            </div>
+            </div>
+
+         <script>
+        const name = localStorage.getItem('userName');
+        if (name) {
+         document.getElementById('displayName').textContent = name;
+         } else {
+         document.getElementById('displayName').textContent = 'Guest';
+        }
+         </script>
+        </body>
+    </head>
+</html>
